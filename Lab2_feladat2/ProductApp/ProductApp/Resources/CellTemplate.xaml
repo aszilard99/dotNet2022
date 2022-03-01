@@ -1,0 +1,17 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    
+                    xmlns:helper="clr-namespace:ProductApp.Helper">
+    <DataTemplate x:Key="IDCellTemplate">
+        <TextBlock Foreground="Beige" FontSize="14" FontWeight="Bold"></TextBlock>
+    </DataTemplate>
+    <DataTemplate x:Key="NameCellTemplate">
+        <TextBlock Foreground="Beige" FontSize="14" FontWeight="Bold"></TextBlock>
+    </DataTemplate>
+    <DataTemplate x:Key="PackageCellTemplate">
+        <TextBlock Foreground="Beige" FontSize="14" FontWeight="Bold"></TextBlock>
+    </DataTemplate>
+    <DataTemplate x:Key="QtyCellTemplate">
+        <TextBlock  FontSize="14" FontWeight="Bold" Foreground="{Binding Converter={x:Static helper:IntegerToBrushConverter.integerToBrushConverter}}"></TextBlock>
+    </DataTemplate>
+</ResourceDictionary>
