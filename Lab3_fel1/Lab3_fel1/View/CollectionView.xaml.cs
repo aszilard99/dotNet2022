@@ -14,22 +14,23 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Lab3_fel1.ViewModel;
 
-namespace Lab3_fel1
+namespace Lab3_fel1.View
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for CollectionView.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class CollectionView : UserControl
     {
-        MainViewModel viewModel = new MainViewModel();
-        public MainWindow()
+        CollectionViewModel viewModel = new CollectionViewModel();
+        public CollectionView()
         {
             InitializeComponent();
             DataContext = viewModel;
         }
-        private void btnChangeName_Click(object sender, RoutedEventArgs e)
+        private void btnAddNewUser_Click(object sender, RoutedEventArgs e)
         {
-            viewModel.ChangeName(txtNewName.Text);
+            viewModel.Users.Add(new Model.User() { Name = txtUserName.Text });
+            txtUserName.Text = string.Empty;
         }
     }
 }
