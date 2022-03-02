@@ -12,6 +12,6 @@
         <TextBlock Foreground="Beige" FontSize="14" FontWeight="Bold"></TextBlock>
     </DataTemplate>
     <DataTemplate x:Key="QtyCellTemplate">
-        <TextBlock  FontSize="14" FontWeight="Bold" Foreground="{Binding Converter={x:Static helper:IntegerToBrushConverter.integerToBrushConverter}}"></TextBlock>
+        <TextBlock  FontSize="14" FontWeight="Bold" Foreground="{Binding Path=Quantity, Converter={ x:Static helper:IntegerToBrushConverter.integerToBrushConverter}}" Text="{Binding Path=Quantity}"></TextBlock>
     </DataTemplate>
 </ResourceDictionary>
