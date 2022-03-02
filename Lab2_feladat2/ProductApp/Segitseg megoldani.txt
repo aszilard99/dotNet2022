@@ -1,0 +1,4 @@
+ha a fejlesztoi kornyezet normalisan mukodne akkor felismerne automatikusan a 
+	Resource Dictionary-kat azok kulon beimportalasa nelkul
+	nem kene a MainWindow.xaml-be DisplaymemberBinding mindenik oszlophoz, eleg lenne egy {Binding} ures cimke a ListView osztaly-nal
+	a CellTemplate-nel lehetne megadni a Text={Binding Path=Quantity} a qtyCellTemplate eseteben, a convertert pedig Foreground={Binding Path=Quantity, x:Static Converter....}
